@@ -3,6 +3,7 @@
 {% for post in object_list %}
 <div>
   <h2>{{ post.title }}</h2>
+  <!-- マークダウンを実装する際htmlタグを認識させるためにsafeオプション必須 -->
   <p>{{ post.html | markdown | safe }}</p>
 </div>
 <hr>
